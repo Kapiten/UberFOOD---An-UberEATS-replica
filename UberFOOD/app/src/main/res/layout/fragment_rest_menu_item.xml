@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_rest_menu_items"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.strettocorp.uberfood.restaurant_menu_item.RestaurantMenuItemFragment"
+    tools:showIn="@layout/activity_rest_menu_item">
+
+    <ScrollView
+        android:id="@+id/rest_menu_item_prep_SV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rest_menu_item_add_to_cart_RL">
+
+        <LinearLayout
+            android:id="@+id/rest_menu_item_prep_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rest_menu_item_description_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                android:gravity="center"
+                android:maxLines="3"
+                tools:text="A great burger made from great things"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rest_menu_item_add_to_cart_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp">
+
+        <Button
+            android:id="@+id/rest_menu_item_add_to_cart_BTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_toStartOf="@+id/rest_menu_item_on_cart_BTN"
+            android:text="Add 1 to Cart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:paddingStart="30dp"
+            style="?android:borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/rest_menu_item_on_cart_BTN"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="28sp"
+            android:background="@color/colorAccent"
+            android:src="@drawable/ic_receipt"
+            style="?android:borderlessButtonStyle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            tools:text="R100.00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

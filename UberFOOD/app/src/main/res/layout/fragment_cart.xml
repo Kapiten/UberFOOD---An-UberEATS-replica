@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.strettocorp.uberfood.cart.CartFragment"
+    tools:showIn="@layout/activity_cart">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="40sp"
+                    tools:text="Restaurant"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/prs_primary_dark"
+                    tools:text="Delivering to your door: 20 - 30 min"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/default_padding">
+
+                <ImageView
+                    android:id="@+id/cart_loca_map_IV"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/img_done"/>
+
+                <TextView
+                    android:id="@+id/cart_loca_placename_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cart_loca_map_IV"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/label_large_size"
+                    tools:text="Place"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/cart_loca_address_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_loca_placename_TV"
+                    android:layout_toEndOf="@+id/cart_loca_map_IV"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/label_small_size"
+                    tools:text="Place"/>
+
+                <EditText
+                    android:id="@+id/cart_loca_deli_note_ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_loca_address_TV"
+                    android:layout_toEndOf="@+id/cart_loca_map_IV"
+                    android:hint="Add delivety note..."
+                    android:padding="5dp"
+                    android:textSize="@dimen/label_small_size"
+                    android:maxLines="2"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cart_items_RV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"/>
+
+            <EditText
+                android:id="@+id/cart_extras_note_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:hint="Add a Note (extra napkins, extra sauce...)"
+                android:maxLines="2"
+                android:padding="@dimen/default_padding"/>
+
+            <RelativeLayout
+                android:id="@+id/cart_total_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:padding="@dimen/default_padding">
+
+                <TextView
+                    android:id="@+id/cart_total_subtotal_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toLeftOf="@+id/cart_total_subtotal_price_TV"
+                    android:text="Subtotal"
+                    android:textColor="@color/prs_primary_dark"
+                    android:textSize="@dimen/label_small_size"/>
+
+                <TextView
+                    android:id="@+id/cart_total_subtotal_price_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/label_small_size"
+                    tools:text="R10.00"/>
+
+                <TextView
+                    android:id="@+id/cart_total_tax_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_total_subtotal_TV"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toLeftOf="@+id/cart_total_tax_price_TV"
+                    android:text="Tax"
+                    android:textColor="@color/prs_primary_dark"
+                    android:textSize="@dimen/label_small_size"/>
+
+                <TextView
+                    android:id="@+id/cart_total_tax_price_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/cart_total_tax_TV"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/label_small_size"
+                    tools:text="R10.00"/>
+
+                <TextView
+                    android:id="@+id/cart_total_deli_fee_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_total_tax_TV"
+                    android:layout_toLeftOf="@+id/cart_total_deli_fee_price_TV"
+                    android:text="Delivery Fee"
+                    android:textColor="@color/prs_primary_dark"
+                    android:textSize="@dimen/label_small_size"/>
+
+                <TextView
+                    android:id="@+id/cart_total_deli_fee_price_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/cart_total_deli_fee_TV"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/label_small_size"
+                    tools:text="R10.00"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:padding="@dimen/default_padding">
+
+                <TextView
+                    android:id="@+id/cart_total_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/cart_total_price_TV"
+                    android:text="Total"
+                    android:textColor="@color/prs_primary_dark"
+                    android:textSize="@dimen/label_small_size"/>
+
+                <TextView
+                    android:id="@+id/cart_total_price_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/label_small_size"
+                    tools:text="R10.00"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:padding="@dimen/default_padding">
+
+                <TextView
+                    android:id="@+id/cart_contact_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal **** "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/label_small_size"/>
+
+                <TextView
+                    android:id="@+id/cart_contact_num_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cart_contact_TV"
+                    android:layout_toStartOf="@+id/cart_contact_option_TV"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/label_small_size"
+                    tools:text="2151"/>
+
+                <TextView
+                    android:id="@+id/cart_contact_option_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Change"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/label_small_size"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10sp"
+                android:drawableStart="@drawable/ic_promo"
+                android:padding="@dimen/default_padding"
+                android:text="Add Promo Code"
+                android:textAllCaps="true"
+                android:textColor="@color/prs_primary_dark"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.strettocorp.uberfood.custom.SwipeButton
+        android:id="@+id/cart_place_order_BTN"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="Place Order"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>

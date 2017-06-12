@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomPreparationAttrs">
+        <attr name="prep_title" format="string" />
+        <attr name="prep_required" format="boolean" />
+        <attr name="prep_item_name" format="string" />
+        <attr name="prep_item_selected" format="boolean" />
+        <attr name="prep_item_price" format="string" />
+    </declare-styleable>
+</resources>
