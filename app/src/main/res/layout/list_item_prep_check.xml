@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <CheckBox
+        android:id="@+id/prep_items_CB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/prep_items_price_TV"
+        android:button="@drawable/checkbox_button"
+        android:padding="7dp"
+        android:textSize="18sp"
+        tools:text="Tomato Sauce"/>
+
+    <TextView
+        android:id="@+id/prep_items_price_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:textColor="@color/prs_primary_dark"
+        android:textSize="18sp"
+        tools:text="R2.00"/>
+
+</RelativeLayout>
