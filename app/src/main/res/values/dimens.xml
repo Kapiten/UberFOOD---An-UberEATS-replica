@@ -8,4 +8,5 @@
     <dimen name="label_medium_size">18sp</dimen>
     <dimen name="label_large_size">20sp</dimen>
     <dimen name="label_xlarge_size">24sp</dimen>
+    <dimen name="label_xxlarge_size">30sp</dimen>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.strettocorp.uberfood.restaurant_menu_item.RestaurantMenuItemActivity">
+    tools:context="com.reverside.uberfood.restaurant_menu_item.RestaurantMenuItemActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

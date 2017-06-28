@@ -6,12 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.strettocorp.uberfood.cart.CartFragment"
+    tools:context="com.reverside.uberfood.cart.CartFragment"
     tools:showIn="@layout/activity_cart">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,6 +29,7 @@
                 android:padding="30dp">
 
                 <TextView
+                    android:id="@+id/cart_restaurant_name_TV"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -35,7 +38,7 @@
                     tools:text="Restaurant"/>
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/cart_restaurant_deli_time_TV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -68,7 +71,7 @@
                     android:padding="5dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/label_large_size"
-                    tools:text="Place"
+                    android:text="Sandton"
                     android:maxLines="1"/>
 
                 <TextView
@@ -135,7 +138,7 @@
                     android:layout_alignParentEnd="true"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/label_small_size"
-                    tools:text="R10.00"/>
+                    android:text="R0.00"/>
 
                 <TextView
                     android:id="@+id/cart_total_tax_TV"
@@ -156,7 +159,7 @@
                     android:layout_alignParentEnd="true"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/label_small_size"
-                    tools:text="R10.00"/>
+                    android:text="R0.00"/>
 
                 <TextView
                     android:id="@+id/cart_total_deli_fee_TV"
@@ -176,7 +179,7 @@
                     android:layout_alignParentEnd="true"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/label_small_size"
-                    tools:text="R10.00"/>
+                    android:text="R0.00"/>
 
             </RelativeLayout>
 
@@ -202,7 +205,7 @@
                     android:layout_alignParentEnd="true"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/label_small_size"
-                    tools:text="R10.00"/>
+                    android:text="R0.00"/>
 
             </RelativeLayout>
 
@@ -218,26 +221,31 @@
                     android:layout_height="wrap_content"
                     android:text="Personal **** "
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/label_small_size"/>
+                    android:textSize="@dimen/label_small_size"
+                    android:layout_centerVertical="true"/>
 
                 <TextView
                     android:id="@+id/cart_contact_num_TV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/cart_contact_TV"
-                    android:layout_toStartOf="@+id/cart_contact_option_TV"
+                    android:layout_toStartOf="@+id/cart_contact_option_BTN"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/label_small_size"
-                    tools:text="2151"/>
+                    tools:text="2151"
+                    android:layout_centerVertical="true"/>
 
-                <TextView
-                    android:id="@+id/cart_contact_option_TV"
+                <Button
+                    android:id="@+id/cart_contact_option_BTN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:text="Change"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/label_small_size"/>
+                    android:background="@drawable/btn_primary"
+                    android:padding="@dimen/default_padding"
+                    android:textSize="13sp"
+                    android:layout_centerVertical="true"/>
 
             </RelativeLayout>
 
@@ -254,13 +262,13 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.strettocorp.uberfood.custom.SwipeButton
+    <com.reverside.uberfood.custom.SwipeButton
         android:id="@+id/cart_place_order_BTN"
         style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
-        android:text="Place Order"
+        android:text=">> Swipe to Place Order>>"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimary"
         android:layout_alignParentBottom="true"

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.strettocorp.uberfood.restaurant.RestaurantFragment"
+    tools:context="com.reverside.uberfood.restaurant.RestaurantFragment"
     tools:showIn="@layout/activity_restaurant">
 
     <android.support.v7.widget.RecyclerView

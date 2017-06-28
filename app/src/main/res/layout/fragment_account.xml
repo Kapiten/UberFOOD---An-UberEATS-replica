@@ -6,7 +6,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:context="com.strettocorp.uberfood.account.AccountFragment"
+            tools:context="com.reverside.uberfood.account.AccountFragment"
             tools:showIn="@layout/activity_account">
 
     <LinearLayout
@@ -55,7 +55,6 @@
                     android:id="@+id/account_firstname_TV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="First Name"
                     android:textAllCaps="true"
                     android:textSize="@dimen/label_small_size"/>
@@ -64,8 +63,9 @@
                     android:id="@+id/account_firstname_ET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:ems="10"
                     android:inputType="textPersonName"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -87,7 +87,6 @@
                     android:id="@+id/account_lastname_ET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:ems="10"
                     android:inputType="textPersonName"/>
             </LinearLayout>
@@ -112,7 +111,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress"
+                android:hint="example@gmail.com"/>
 
         </LinearLayout>
 
@@ -147,24 +147,55 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/account_new_password_LL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/account_new_password_TV"
+                    android:id="@+id/account_password_TV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="New Password"
+                    android:text="Password"
                     android:textAllCaps="true"
                     android:textSize="@dimen/label_small_size"/>
 
-                <EditText
-                    android:id="@+id/account_new_password_ET"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPassword"/>
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/account_char_cnt_password_LL"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_circle_text_red"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/account_char_cnt_password_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="0"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false"
+                        app:passwordToggleEnabled="true"
+                        android:layout_toStartOf="@+id/account_char_cnt_password_LL">
+                        <EditText
+                            android:id="@+id/account_password_ET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPassword"/>
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
 
             </LinearLayout>
 
@@ -177,7 +208,7 @@
                     android:id="@+id/account_verify_password_TV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Verify New Password"
+                    android:text="Verify Password"
                     android:textAllCaps="true"
                     android:textSize="@dimen/label_small_size"/>
 
@@ -186,7 +217,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:drawableEnd="@drawable/ic_not_complete"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -237,15 +269,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="@dimen/default_padding">
 
-            <android.support.v7.widget.RecyclerView
+            <Button
+                android:id="@+id/account_get_locations_BTN"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </android.support.v7.widget.RecyclerView>
+                android:layout_height="wrap_content"
+                android:text="Get Locations"
+                android:background="@drawable/btn_primary"/>
 
         </LinearLayout>
 

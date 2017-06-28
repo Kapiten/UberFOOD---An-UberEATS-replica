@@ -3,7 +3,7 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_done"
-        android:icon="@drawable/img_done"
+        android:icon="@drawable/ic_done"
         android:title="Done"
-        app:showAsAction="always"/>
+        app:showAsAction="always|withText"/>
 </menu>

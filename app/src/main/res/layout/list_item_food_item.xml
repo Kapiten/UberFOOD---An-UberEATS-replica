@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/prs_primary_btn">
+    android:background="@drawable/btn_primary">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,12 +26,14 @@
                 android:layout_height="match_parent"
                 tools:src="@drawable/img_restaurant_item"
                 android:scaleType="centerCrop"
-                />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
 
             <RelativeLayout
                 android:id="@+id/rest_mitem_note_RL"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:visibility="gone">
 
                 <View
@@ -47,11 +49,11 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:background="@color/prs_primary_dark"
+                    android:layout_centerInParent="true"
                     tools:text="Sold Out"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
-                    android:layout_alignBottom="@+id/rest_mitem_note_bg_V"/>
+                    android:textSize="18sp"/>
 
             </RelativeLayout>
 

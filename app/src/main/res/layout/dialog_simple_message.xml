@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        style="?android:listSeparatorTextViewStyle">
+
+        <ImageButton
+            android:id="@+id/dialog_simple_close_BTN"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/btn_close"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+        <TextView
+            android:id="@+id/dialog_simple_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_marginEnd="12dp"
+            tools:text="Title"
+            android:singleLine="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/dialog_simple_close_BTN"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dialog_simple_message_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="Hello bro"
+        android:textColor="#000"
+        android:maxLines="5"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#43000000"
+        android:paddingTop="1dp">
+
+        <Button
+            android:id="@+id/dialog_simple_negative_BTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:background="@drawable/btn_primary"
+            android:visibility="gone"
+            style="@style/Base.Widget.AppCompat.ButtonBar"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/dialog_simple_positive_BTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:background="@drawable/btn_green"
+            style="@style/Base.Widget.AppCompat.ButtonBar"/>
+
+    </LinearLayout>
+
+</LinearLayout>
