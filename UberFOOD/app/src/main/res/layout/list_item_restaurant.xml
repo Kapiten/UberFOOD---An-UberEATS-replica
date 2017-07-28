@@ -16,6 +16,34 @@
         android:scaleType="centerCrop"/>
 
     <RelativeLayout
+        android:id="@+id/restaurant_closed_msg_RL"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/rest_mitem_note_bg_V"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/prs_primary_dark"
+            android:alpha="0.6"/>
+
+        <TextView
+            android:id="@+id/rest_mitem_note_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/prs_primary_dark"
+            android:layout_centerInParent="true"
+            android:text="Closed"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/label_large_size"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/restaurant_ondisplay_IV"

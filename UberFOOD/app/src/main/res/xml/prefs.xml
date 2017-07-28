@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="UberFoOOD Preferences"/>
+
+    <CheckBoxPreference android:title="Use debug server"
+                        android:summary="Connecting to a debug server instead of prod server"
+                        android:key="isDebug"/>
+
+    <SwitchPreference
+        android:title="Debug Logs"
+        android:summary="Show debug logs on LogCat"
+        android:key="logsVerbose"/>
+
+</PreferenceScreen>

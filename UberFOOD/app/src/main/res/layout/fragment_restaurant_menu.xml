@@ -7,14 +7,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.strettocorp.uberfood.restaurant_menu.RestaurantMenuFragment"
-    tools:showIn="@layout/activity_restaurant_menu">
+    tools:context="com.reverside.uberfood.restaurant_menu.RestaurantMenuFragment"
+    tools:showIn="@layout/activity_restaurant_menu"
+    android:orientation="vertical">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rest_m_RV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rest_m_check_out_RBTN"
+        android:layout_alignParentTop="true"/>
 
-    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:id="@+id/rest_m_check_out_RBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_green"
+        android:padding="@dimen/default_padding"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/check_out_btn_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Check Out"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/label_xlarge_size"
+            android:textAllCaps="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/rest_m_check_out_qty_TV"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="1"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/bg_circle_text"
+            android:layout_toEndOf="@+id/check_out_btn_TV"
+            android:layout_marginStart="@dimen/default_padding"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/label_small_size"/>
+
+    </RelativeLayout>
+
+    <!--<Button
+        android:id="@+id/rest_m_check_out_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Check Out"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:background="@drawable/btn_green"
+        style="?android:borderlessButtonStyle"/>-->
 
 </RelativeLayout>

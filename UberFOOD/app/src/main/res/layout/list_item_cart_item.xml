@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/default_padding"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:background="@color/colorPrimary">
 
     <TextView
-        android:id="@+id/cart_qty_TV"
+        android:id="@+id/cart_item_qty_TV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/default_padding"
@@ -21,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/default_padding"
-        android:layout_toEndOf="@+id/cart_qty_TV"
+        android:layout_toEndOf="@+id/cart_item_qty_TV"
         android:layout_toStartOf="@+id/cart_item_price_TV"
         android:layout_centerInParent="true"
         android:orientation="vertical">
@@ -52,5 +53,5 @@
         android:padding="@dimen/default_padding"
         android:textSize="@dimen/label_small_size"
         android:textColor="@color/colorPrimaryDark"
-        tools:text="R10.00"/>
+        tools:text="R0.00"/>
 </RelativeLayout>

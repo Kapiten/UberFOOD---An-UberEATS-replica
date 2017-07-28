@@ -5,7 +5,7 @@
     android:id="@+id/activity_launch"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.strettocorp.uberfood.launch.LaunchActivity">
+    tools:context="com.reverside.uberfood.launch.LaunchActivity">
 
     <ImageView
         android:id="@+id/launch_IV"
@@ -13,75 +13,6 @@
         android:layout_height="match_parent"
         android:src="@drawable/img_launch_splash"
         android:scaleType="centerCrop"/>
-
-    <ScrollView
-        android:id="@+id/launch_SV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
-
-        <LinearLayout
-            android:id="@+id/launch_lgn_LL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:padding="15dp"
-            android:background="@drawable/frame_white_bg"
-            android:visibility="gone">
-
-            <EditText
-                android:id="@+id/launch_lgn_usrname_ET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Username"
-                android:padding="7dp"
-                android:text="root"
-                android:background="@drawable/text_input_border"/>
-
-            <EditText
-                android:id="@+id/launch_lgn_pword_ET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:padding="7dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:text="root1234"
-                android:background="@drawable/text_input_border"/>
-
-            <Button
-                android:id="@+id/launch_lgn_login_BTN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/prs_green_btn"
-                android:textColor="@color/colorPrimary"
-                android:text="Login"
-                android:textSize="18dp"/>
-
-            <Button
-                android:id="@+id/launch_lgn_fgt_pword_BTN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/prs_primary_btn"
-                android:textColor="@color/colorAccent"
-                android:text="Forgot Password"
-                android:textSize="18dp"/>
-
-            <Button
-                android:id="@+id/launch_lgn_register_BTN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/prs_primary_dark_btn"
-                android:textColor="@color/colorPrimary"
-                android:text="Register"
-                android:textSize="18dp"/>
-
-        </LinearLayout>
-
-    </ScrollView>
 
     <Button
         android:id="@+id/launch_enter_BTN"
@@ -91,7 +22,16 @@
         android:text="Enter"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
-        android:background="@drawable/prs_green_btn"
+        android:background="@drawable/btn_green"
         style="?android:borderlessButtonStyle"/>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/bar_text"
+        android:background="#b1000000"
+        android:padding="@dimen/default_padding"
+        android:id="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
 </RelativeLayout>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.strettocorp.uberfood.restaurant.RestaurantActivity">
+    tools:context="com.reverside.uberfood.restaurant.RestaurantActivity">
 
     <include layout="@layout/fragment_restaurant"/>
 
@@ -41,7 +41,7 @@
                         android:orientation="horizontal"
                         android:gravity="center"
                         android:layout_gravity="center"
-                        android:background="@drawable/prs_primary_btn">
+                        android:background="@drawable/btn_primary">
 
                         <TextView
                             android:id="@+id/restaurant_location_TV"
@@ -53,7 +53,7 @@
                             android:maxLines="1"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="24sp"
-                            tools:text="Location" />
+                            android:text="Sandton" />
 
                         <ImageView
                             android:layout_width="wrap_content"

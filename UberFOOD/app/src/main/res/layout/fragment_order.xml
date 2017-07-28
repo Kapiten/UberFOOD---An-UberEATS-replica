@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.reverside.uberfood.orders.OrderFragment"
+    tools:showIn="@layout/activity_order">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/order_prg_confirm_IV"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_adown_green"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/frame_white_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/order_request_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Confirming orders"
+                    android:textSize="@dimen/label_xlarge_size"
+                    android:gravity="center"
+                    android:drawablePadding="-20dp"
+                    android:padding="@dimen/default_padding"/>
+
+                <ImageView
+                    android:id="@+id/order_request_status_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_busy"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/default_padding"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/order_request_LL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/prs_primary"
+                    android:layout_margin="@dimen/default_padding" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_padding"
+                    android:gravity="center"
+                    android:text="Restaurant must now confirm/accept the orders."
+                    android:textColor="@color/prs_primary_dark"
+                    android:textSize="@dimen/label_medium_size"/>
+
+                <Button
+                    android:id="@+id/order_cancel_BTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/btn_red"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/order_prg_food_IV"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_adown_black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/frame_white_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/order_food_prep_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Food is being prepared"
+                    android:textSize="@dimen/label_xlarge_size"
+                    android:gravity="center"
+                    android:padding="@dimen/default_padding"
+                    android:maxLines="1"
+                    android:layout_toStartOf="@+id/order_food_status_IV"/>
+
+                <ImageView
+                    android:id="@+id/order_food_status_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_not_complete"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/default_padding"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/order_food_prep_LL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/prs_primary"
+                    android:layout_margin="@dimen/default_padding" />
+
+                <TextView
+                    android:id="@+id/order_deli_location_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_padding"
+                    android:gravity="center"
+                    android:text="Sandton"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/label_large_size"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/order_prg_courier_IV"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_adown_black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/frame_white_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/order_delivery_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Courier is arriving soon"
+                    android:textSize="@dimen/label_xlarge_size"
+                    android:gravity="center"
+                    android:drawablePadding="-20dp"
+                    android:padding="@dimen/default_padding"
+                    android:layout_toStartOf="@+id/order_courier_status_IV"/>
+
+                <ImageView
+                    android:id="@+id/order_courier_status_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_not_complete"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/default_padding"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/order_delivery_LL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/prs_primary"
+                    android:layout_margin="@dimen/default_padding" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_padding"
+                    android:gravity="center"
+                    android:text="Curious where the courier is? Check out the location below"
+                    android:textColor="@color/prs_primary_dark"
+                    android:textSize="@dimen/label_medium_size"/>
+
+                <fragment
+                    android:id="@+id/order_delivery_MV"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    class="com.google.android.gms.maps.SupportMapFragment"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

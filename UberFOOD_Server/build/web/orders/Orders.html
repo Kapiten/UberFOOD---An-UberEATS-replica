@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <script language="javascript" type="text/javascript">
+            var request = null;
+
+            function createRequest() {
+                try {
+                    request = new XMLHttpRequest();
+                } catch (trymicrosoft) {
+                    try {
+                        request = new ActiveXObject("MsXML2.XMLHTTP");
+                    } catch (othermicrosoft) {
+                        try {
+                            request = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (failed) {
+                            request = null;
+                        }
+                    }
+                }
+
+                if (request == null)
+                    alert("Error creating request object!");
+            }
+
+            function getMessage()
+            {
+                createRequest();
+                var playerid = document.getElementById("orderId").value;
+                id = eval(playerid);
+                var url = "http://localhost:8080/TheServerComp/rest/findEntity/orderAll";
+                request.onreadystatechange = handleResponse;
+                request.open("GET", url, true);
+                request.send(null);
+            }
+            function handleResponse() {
+                if (request.readyState == 4 && request.status == 200)
+                {
+                    var det = eval("(" + request.responseText + ")");
+                    document.getElementById('orderNo').value = det.orderNo;
+                    document.getElementById('time').value = det.date;
+                    document.getElementById('deliveryNote').value = det.deliveryNote;
+
+                }
+            }
+        </script>
+        <table>
+            <tr>
+                <td><td>Enter Order ID : </td>
+                <td><input type="text" id="orderId" size="10"/>
+                <input type="button" value="Get Order" onclick="getMessage()"/></td>
+            </tr>
+            <tr>
+                <td>Order No</td>
+                <td>Time</td>
+                <td>Delivery Note</td>
+                <td>Recipient</td>
+                <td>Confirm</td>
+            </tr>
+            <tr>
+                <td><label id="ordroNo"></label></td>
+                <td><label id="time"></label></td>
+                <td><label id="deliveryNote"></label></td>
+                <td><label id="recipient"></label></td>
+                <td><input type="button" value="Confirm"/></td>
+            </tr>
+        </table>
+    </body>
+</html>
